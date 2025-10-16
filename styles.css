@@ -1,0 +1,757 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #007bff;
+}
+
+/* Main content */
+.main {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+.collection-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.collection-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product-count {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto 3rem auto;
+    padding: 0 20px;
+}
+
+/* Product card styles */
+.product-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #e9ecef;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e74c3c, #f39c12, #3498db, #2ecc71);
+    border-radius: 16px 16px 0 0;
+    z-index: 1;
+}
+
+.product-card::after {
+    content: 'REA';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.product-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 12px;
+}
+
+.product-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+    line-height: 1.3;
+}line-height: 1.4;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.sale-price {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.original-price {
+    font-size: 0.8rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Scary Popup Styles */
+.scary-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.scary-popup.hidden {
+    display: none;
+}
+
+.scary-popup.show {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+.popup-content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.scary-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+}
+
+.login-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.scary-login-box {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8), inset 0 0 20px rgba(255, 0, 0, 0.1);
+    text-align: center;
+    min-width: 300px;
+    animation: pulse 2s infinite;
+}
+
+.scary-title {
+    color: #ff0000;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #ff0000;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 3px;
+}
+
+.hint-text {
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+.glitch-text {
+    color: #ff6666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    animation: glitch 1s infinite;
+    font-family: 'Courier New', monospace;
+}
+
+.scary-input {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    color: #ff0000;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.scary-input:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    border-color: #ff3333;
+}
+
+.scary-input::placeholder {
+    color: #666;
+}
+
+.scary-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.scary-button:hover {
+    background: linear-gradient(135deg, #ff3333, #ff0000);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: #ff6666;
+    font-size: 1rem;
+    margin-top: 15px;
+    display: none;
+    animation: blink 0.5s infinite;
+    font-family: 'Courier New', monospace;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+@keyframes glitch {
+    0%, 100% { 
+        text-shadow: 0 0 5px #ff0000;
+        transform: translateX(0);
+    }
+    25% { 
+        text-shadow: -2px 0 #ff0000, 2px 0 #00ff00;
+        transform: translateX(-2px);
+    }
+    50% { 
+        text-shadow: 2px 0 #ff0000, -2px 0 #0000ff;
+        transform: translateX(2px);
+    }
+    75% { 
+        text-shadow: -1px 0 #ff0000, 1px 0 #ffff00;
+        transform: translateX(-1px);
+    }
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Jumpscare Styles */
+.jumpscare-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.jumpscare-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+    animation: jumpscareFlash 0.5s ease-in-out;
+}
+
+.jumpscare-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    animation: jumpscareZoom 0.5s ease-out;
+    filter: brightness(1.2) contrast(1.3) saturate(1.5);
+}
+
+@keyframes jumpscareFlash {
+    0% { 
+        opacity: 0;
+        background: #000;
+    }
+    10% { 
+        opacity: 1;
+        background: #ff0000;
+    }
+    20% { 
+        background: #000;
+    }
+    30% { 
+        background: #ff0000;
+    }
+    40% { 
+        background: #000;
+    }
+    100% { 
+        opacity: 1;
+        background: #000;
+    }
+}
+
+@keyframes jumpscareZoom {
+    0% { 
+        transform: scale(0.1) rotate(-10deg);
+        filter: brightness(0) contrast(0) saturate(0);
+    }
+    50% { 
+        transform: scale(1.2) rotate(5deg);
+        filter: brightness(2) contrast(2) saturate(2);
+    }
+    100% { 
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1.2) contrast(1.3) saturate(1.5);
+    }
+}
+
+/* Blood Effects */
+.blood-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.blood-drip {
+    position: absolute;
+    background: linear-gradient(180deg, #8B0000, #FF0000, #8B0000);
+    border-radius: 0 0 50% 50%;
+    animation: bloodDrip 3s infinite ease-in;
+}
+
+.blood-drip-1 {
+    width: 8px;
+    height: 40px;
+    left: 15%;
+    top: -40px;
+    animation-delay: 0s;
+}
+
+.blood-drip-2 {
+    width: 12px;
+    height: 60px;
+    left: 35%;
+    top: -60px;
+    animation-delay: 1s;
+}
+
+.blood-drip-3 {
+    width: 6px;
+    height: 30px;
+    left: 65%;
+    top: -30px;
+    animation-delay: 2s;
+}
+
+.blood-drip-4 {
+    width: 10px;
+    height: 50px;
+    left: 85%;
+    top: -50px;
+    animation-delay: 0.5s;
+}
+
+.blood-drip-5 {
+    width: 14px;
+    height: 70px;
+    left: 75%;
+    top: -70px;
+    animation-delay: 1.5s;
+}
+
+.blood-splatter {
+    position: absolute;
+    background: radial-gradient(circle, #8B0000, #FF0000, transparent);
+    border-radius: 50%;
+    animation: bloodSplatter 4s infinite ease-out;
+}
+
+.blood-splatter-1 {
+    width: 30px;
+    height: 30px;
+    left: 20%;
+    top: 30%;
+    animation-delay: 0.5s;
+}
+
+.blood-splatter-2 {
+    width: 25px;
+    height: 25px;
+    left: 70%;
+    top: 60%;
+    animation-delay: 2s;
+}
+
+.blood-splatter-3 {
+    width: 35px;
+    height: 35px;
+    left: 45%;
+    top: 80%;
+    animation-delay: 3s;
+}
+
+.blood-stain {
+    position: absolute;
+    background: radial-gradient(ellipse, #8B0000, #FF0000, transparent);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: bloodStain 5s infinite ease-in-out;
+}
+
+.blood-stain-1 {
+    width: 80px;
+    height: 40px;
+    left: 10%;
+    top: 70%;
+    animation-delay: 1s;
+}
+
+.blood-stain-2 {
+    width: 60px;
+    height: 30px;
+    left: 80%;
+    top: 20%;
+    animation-delay: 2.5s;
+}
+
+@keyframes bloodDrip {
+    0% {
+        transform: translateY(0) scaleY(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(50vh) scaleY(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scaleY(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes bloodSplatter {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes bloodStain {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav ul {
+        gap: 1rem;
+    }
+
+    .collection-header h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .collection-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+}
+
+/* Additional styling for better visual appeal */
+.product-card {
+    position: relative;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.1) 50%, transparent 51%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+/* Loading animation for images */
+.product-image {
+    position: relative;
+}
+
+.product-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.product-image img {
+    position: relative;
+    z-index: 2;
+}
+
+/* Sale badge */
+.product-card {
+    position: relative;
+}
+
+.product-card::after {
+    content: 'REA';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 3;
+}

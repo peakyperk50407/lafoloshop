@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lafolo Collection - E-Commerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="ritual.jpg" alt="Lafolo Logo" class="logo-image">
+                <h1>Lafolo</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Hem</a></li>
+                    <li><a href="#products">Produkter</a></li>
+                    <li><a href="#about">Om oss</a></li>
+                    <li><a href="#login">Logga In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="collection-header">
+                <h2>Lafolo Collection</h2>
+                <p class="product-count">8 produkter</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="1.png" alt="Lafolo Collectible Figure">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Lafolo Collectible Figure</h3>
+                        <div class="price-container">
+                            <span class="sale-price">REA-pris 999 SEK</span>
+                            <span class="original-price">Pris 1 999 SEK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="2.png" alt="Limited Edition Figure">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Limited Edition Series</h3>
+                        <div class="price-container">
+                            <span class="sale-price">REA-pris 749 SEK</span>
+                            <span class="original-price">Pris 998 SEK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="3.png" alt="Mystery Box">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mystery Box Collection</h3>
+                        <div class="price-container">
+                            <span class="sale-price">REA-pris 549 SEK</span>
+                            <span class="original-price">Pris 999 SEK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="4.png" alt="Special Edition">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Special Edition Figure</h3>
+                        <div class="price-container">
+                            <span class="sale-price">REA-pris 599 SEK</span>
+                            <span class="original-price">Pris 999 SEK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="5.png" alt="Lafolo Collectible Figure">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mini Series Collection</h3>
+                        <div class="price-container">
+                            <span class="sale-price">REA-pris 399 SEK</span>
+                            <span class="original-price">Pris 499 SEK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="6.png" alt="Lafolo Collectible Figure">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Rare Find Series</h3>
+                        <div class="price-container">
+                            <span class="sale-price">REA-pris 499 SEK</span>
+                            <span class="original-price">Pris 999 SEK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="7.png" alt="Lafolo Collectible Figure">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Set Collection</h3>
+                        <div class="price-container">
+                            <span class="sale-price">REA-pris 2 599 SEK</span>
+                            <span class="original-price">Pris 4 999 SEK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="8.png" alt="Lafolo Collectible Figure">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Deluxe Edition Box</h3>
+                        <div class="price-container">
+                            <span class="sale-price">REA-pris 2 899 SEK</span>
+                            <span class="original-price">Pris 5 499 SEK</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Lafolo Collection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scary Popup -->
+    <div id="scaryPopup" class="scary-popup hidden">
+        <div class="popup-content">
+            <video id="scaryVideo" class="scary-video" autoplay muted loop>
+                <source src="steg.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Blood Effects -->
+            <div class="blood-overlay">
+                <div class="blood-drip blood-drip-1"></div>
+                <div class="blood-drip blood-drip-2"></div>
+                <div class="blood-drip blood-drip-3"></div>
+                <div class="blood-drip blood-drip-4"></div>
+                <div class="blood-drip blood-drip-5"></div>
+                <div class="blood-splatter blood-splatter-1"></div>
+                <div class="blood-splatter blood-splatter-2"></div>
+                <div class="blood-splatter blood-splatter-3"></div>
+                <div class="blood-stain blood-stain-1"></div>
+                <div class="blood-stain blood-stain-2"></div>
+            </div>
+            
+            <div class="login-overlay">
+                <div class="scary-login-box">
+                    <h2 class="scary-title">ENTER THE CODE</h2>
+                    <div class="hint-text">3 bokstäver & 3 siffror</div>
+                    <div class="glitch-text">ACCESS DENIED</div>
+                    <input type="password" id="passwordInput" class="scary-input" placeholder="PASSWORD..." maxlength="6">
+                    <button id="loginBtn" class="scary-button">ENTER</button>
+                    <div class="error-message" id="errorMessage">WRONG CODE... TRY AGAIN</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="scaryAudio" preload="auto">
+        <source src="scary.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Jumpscare Audio -->
+    <audio id="jumpscareAudio" preload="auto">
+        <source src="ljud.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Jumpscare Element -->
+    <div id="jumpscareOverlay" class="jumpscare-overlay hidden">
+        <img src="jumpscare.png" alt="Jumpscare" class="jumpscare-image">
+    </div>
+
+    <script>
+        // Make everything clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('scaryPopup');
+            const video = document.getElementById('scaryVideo');
+            const audio = document.getElementById('scaryAudio');
+            const passwordInput = document.getElementById('passwordInput');
+            const loginBtn = document.getElementById('loginBtn');
+            const errorMessage = document.getElementById('errorMessage');
+            const jumpscareOverlay = document.getElementById('jumpscareOverlay');
+            const jumpscareAudio = document.getElementById('jumpscareAudio');
+
+            // Create scary laugh audio context
+            let audioContext;
+            let laughBuffer;
+
+            // Add click event to entire document
+            document.addEventListener('click', function(e) {
+                if (!popup.classList.contains('show')) {
+                    showScaryPopup();
+                }
+            });
+
+            function createScaryLaugh() {
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                
+                // Create scary laugh sound using Web Audio API
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                const filter = audioContext.createBiquadFilter();
+                
+                oscillator.connect(filter);
+                filter.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                // Configure scary laugh parameters
+                oscillator.frequency.setValueAtTime(150, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(80, audioContext.currentTime + 0.5);
+                oscillator.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 1);
+                oscillator.frequency.exponentialRampToValueAtTime(60, audioContext.currentTime + 1.5);
+                
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(800, audioContext.currentTime);
+                
+                gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+                gainNode.gain.linearRampToValueAtTime(0.3, audioContext.currentTime + 0.1);
+                gainNode.gain.exponentialRampToValueAtTime(0.1, audioContext.currentTime + 0.5);
+                gainNode.gain.linearRampToValueAtTime(0.4, audioContext.currentTime + 0.8);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 2);
+                
+                oscillator.type = 'sawtooth';
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 2);
+            }
+
+            function playRandomLaughs() {
+                // Play random scary laughs
+                setInterval(() => {
+                    if (popup.classList.contains('show')) {
+                        createScaryLaugh();
+                    }
+                }, Math.random() * 5000 + 3000); // Random interval between 3-8 seconds
+            }
+
+            function triggerJumpscare() {
+                // Show jumpscare overlay
+                jumpscareOverlay.classList.remove('hidden');
+                jumpscareOverlay.classList.add('show');
+                
+                // Play jumpscare sound
+                jumpscareAudio.currentTime = 0;
+                jumpscareAudio.play().catch(e => console.log('Jumpscare audio play failed:', e));
+                
+                // Hide jumpscare after 2 seconds
+                setTimeout(() => {
+                    jumpscareOverlay.classList.remove('show');
+                    setTimeout(() => {
+                        jumpscareOverlay.classList.add('hidden');
+                    }, 100);
+                }, 2000);
+            }
+
+            function showScaryPopup() {
+                popup.classList.remove('hidden');
+                popup.classList.add('show');
+                video.play();
+                audio.play().catch(e => console.log('Audio play failed:', e));
+                passwordInput.focus();
+                
+                // Start playing random scary laughs
+                playRandomLaughs();
+                
+                // Play initial laugh after a short delay
+                setTimeout(createScaryLaugh, 1000);
+            }
+
+            // Password check
+            function checkPassword() {
+                const password = passwordInput.value.toUpperCase();
+                if (password === 'LVY305') {
+                    window.location.href = 'https://s.bengtsson.com';
+                } else {
+                    // Trigger jumpscare on wrong password
+                    triggerJumpscare();
+                    
+                    // Show error message after jumpscare
+                    setTimeout(() => {
+                        errorMessage.style.display = 'block';
+                        passwordInput.value = '';
+                        passwordInput.classList.add('shake');
+                        setTimeout(() => {
+                            passwordInput.classList.remove('shake');
+                            errorMessage.style.display = 'none';
+                        }, 2000);
+                    }, 2000);
+                }
+            }
+
+            loginBtn.addEventListener('click', checkPassword);
+            passwordInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkPassword();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
