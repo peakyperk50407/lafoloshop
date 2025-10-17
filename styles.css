@@ -421,6 +421,10 @@ body {
     transition: opacity 0.1s ease-in-out;
 }
 
+.jumpscare-overlay.hidden {
+    display: none;
+}
+
 .jumpscare-overlay.show {
     opacity: 1;
     pointer-events: all;
